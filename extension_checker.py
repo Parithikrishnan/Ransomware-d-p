@@ -1,5 +1,6 @@
 import os
 import time
+import csv
 
 RANSOM_EXTS = [
     ".locked", ".encrypted", ".enc", ".crypt", ".crypz", ".locky", ".crypto", ".cry",
@@ -17,11 +18,24 @@ RANSOM_EXTS = [
 
 target_dir = "/home/r1ley/ransom/"
 interval = 2  
+csv_file = "csv/ransomware_files.csv"
+
+# Create CSV with headers if not exists
+if not os.path.exists(csv_file):
+    with open(csv_file, mode="w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["Timestamp", "File Path", "Extension"])
 
 while True:
     for root, dirs, files in os.walk(target_dir):
         for f in files:
             _, ext = os.path.splitext(f)
             if ext.lower() in RANSOM_EXTS:
-                print(os.path.join(root, f))
+                timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                file_path = os.path.join(root, f)
+                
+                # Write to CSV
+                with open(csv_file, mode="a", newline="") as f_out:
+                    writer = csv.writer(f_out)
+                    writer.writerow([timestamp, file_path, ext])
     time.sleep(interval)

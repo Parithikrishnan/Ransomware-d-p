@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 DISK_SPIKE_THRESHOLD = 30 * 1024 * 1024  
-CSV_FILE = "disk_io_speed.csv"
+CSV_FILE = "csv/disk_io_speed.csv"
 
 
 write_header = not os.path.exists(CSV_FILE)
