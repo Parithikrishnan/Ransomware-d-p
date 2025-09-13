@@ -1,0 +1,4 @@
+1-2.png
+hello.o
+test.sh
+config.txt

@@ -15,5 +15,3 @@ thread1.join()
 thread2.join()
 thread3.join()
 thread4.join()
-
-print("All scripts have finished.")
