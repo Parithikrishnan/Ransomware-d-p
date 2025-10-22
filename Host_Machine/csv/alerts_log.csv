@@ -1,0 +1,5 @@
+Timestamp,Alert Message,File Path,Action Status
+2025-09-13 09:42:08,Alert: /home/user/malware.locked,/home/user/malware.locked,File not found: /home/user/malware.locked
+2025-09-13 09:43:18,Alert: /home/user/malware.locked,/home/user/malware.locked,File not found: /home/user/malware.locked
+2025-09-13 09:44:00,Alert: /home/r1ley/helloworlddharshan.txt,/home/r1ley/helloworlddharshan.txt,File not found: /home/r1ley/helloworlddharshan.txt
+2025-09-13 09:44:14,Alert: /home/r1ley/coming/helloworlddharshan.txt,/home/r1ley/coming/helloworlddharshan.txt,Deleted: /home/r1ley/coming/helloworlddharshan.txt
